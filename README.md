@@ -1,7 +1,8 @@
 # 📊 Análise de Ações da Bovespa e MACD 🚀
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)]([https://github.com/adalbertobrant/macd/blob/main/LICENSE](https://github.com/adalbertobrant/macd/blob/main/LICENSE))
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/adalbertobrant/macd/blob/main/LICENSE)
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://seu-app-link-aqui)
+
 
 ## 🌟 Se você gostou deste projeto, por favor, dê uma estrela! 🌟
 
