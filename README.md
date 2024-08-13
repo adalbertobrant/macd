@@ -18,7 +18,7 @@ Este projeto é uma ferramenta de análise de ações da Bovespa que utiliza os 
 
 ## 🚀 Como usar
 
-1. Clone este repositório: git clone https://github.com/seu-usuario/seu-repositorio.git
+1. Clone este repositório: git clone https://github.com/adalbertobrant/macd.git
 2. Instale as dependências: pip install -r requirements.txt
 3. Execute o aplicativo Streamlit no terminal : streamlit run app.py
 4. Acesse o aplicativo no seu navegador (geralmente em `http://localhost:8501`)
