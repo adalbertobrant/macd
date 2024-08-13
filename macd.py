@@ -4,6 +4,7 @@ import numpy as np
 import streamlit as st
 import concurrent.futures
 import plotly.graph_objects as go
+import streamlit.components.v1 as components
 
 def get_stock_data(ticker, period, interval):
     try:
@@ -91,8 +92,19 @@ def plot_stock(df, ticker, short_ma, long_ma):
     
     return fig
 
-
 def main():
+    # Adiciona o código HTML e JavaScript para o alerta
+    alert_script = """
+    <script>
+        window.onload = function() {
+            alert("ATENÇÃO: As informações apresentadas neste site não devem ser consideradas como aconselhamento, recomendação, oferta ou solicitação para comprar ou vender ações, títulos, valores mobiliários ou qualquer outro instrumento financeiro. É importante destacar que investimentos envolvem riscos e é responsabilidade do investidor avaliar cuidadosamente suas opções antes de tomar qualquer decisão de investimento. Os dados fornecidos neste site são apenas para fins informativos, educacionais e não garantem a precisão ou integridade dos dados apresentados. Maiores informações:   https://www.linkedin.com/in/ilha/     ");
+        }
+    </script>
+    """
+    
+    # Insere o HTML no Streamlit
+    components.html(alert_script, height=0)
+    
     st.title("Análise e MACD - Ações da Bovespa")
     
     period = st.text_input("Digite o período (exemplo: 1d, 2mo):", value="1d")
