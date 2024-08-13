@@ -112,8 +112,15 @@ def main():
     short_ma = st.number_input("Média Móvel Curta:", value=50, min_value=1, max_value=100)
     long_ma = st.number_input("Média Móvel Longa:", value=200, min_value=1, max_value=500)
     
+    # User input for stock ticker
+    user_stock = st.text_input("Entre o ticker da ação para Bovespa coloque '.SA' ao final (e.g., AAPL, MSFT, petr4.sa,etc.)")
+    
     if st.button("Analisar"):
         tickers = get_all_stocks()
+        
+        # Add user input stock to the list if provided
+        if user_stock:
+            tickers.append(user_stock)
         
         with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
             results = list(executor.map(lambda t: get_stock_data(t, period, interval), tickers))
